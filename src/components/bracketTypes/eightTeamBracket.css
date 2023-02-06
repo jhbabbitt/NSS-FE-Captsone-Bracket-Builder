@@ -1,0 +1,311 @@
+.entire-8-team-bracket {
+    display: grid;
+    grid-template-columns: repeat(7, [col-start] 1fr);
+    margin: 20px;
+}
+
+.round.r-of-8 {
+    display: grid;
+    gap: 2rem
+}
+
+.round.r-of-4 {
+    display: grid;
+    grid-column: col-start 3;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+
+.round.r-of-2 {
+    display: grid;
+    grid-column: col-start 5;
+}
+
+.round.champion-round {
+    display: grid;
+    grid-column: col-start 7;
+}
+
+.bracket-game {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.round.champion-round button.player-top {
+    display: flex;
+    justify-content: center;
+}
+
+button.player {
+    height: 60px;
+    text-align: center;
+}
+
+.connectors.champion-round {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.connectors.champion-round .top-line {
+    grid-column-start: 1;
+    grid-row-start: 8;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    justify-self: center;
+}
+
+.connectors.champion-round .bottom-line {
+    grid-column-start: 1;
+    grid-row-start: 10;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    justify-self: center;
+}
+
+.connectors.champion-round .vert-line {
+    grid-column-start: 2;
+    grid-row-start: 8;
+    grid-row-end: 10;
+    height: 100%;
+    width: 3px;
+    background-color: black;
+    align-self: start;
+}
+
+.connectors.champion-round .next-line {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 9;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+}
+
+.connectors.r-of-2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem
+}
+
+.connectors.r-of-2 .game-1-lines {
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.connectors.r-of-2 .game-2-lines {
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.connectors.r-of-2 .top-line {
+    grid-column-start: 1;
+    grid-row-start: 5;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    align-self: baseline;
+    justify-self: center;
+}
+
+.connectors.r-of-2 .bottom-line {
+    grid-column-start: 1;
+    grid-row-start: 7;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    align-self: baseline;
+    justify-self: center;
+}
+
+.connectors.r-of-2 .vert-line-1 {
+    grid-column-start: 2;
+    grid-row-start: 5;
+    grid-row-end: 7;
+    height: 100%;
+    width: 3px;
+    background-color: black;
+    align-self: start;
+}
+
+.connectors.r-of-2 .connector-line {
+    grid-column-start: 2;
+    grid-row-start: 6;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    align-self: baseline;
+    justify-self: center;
+}
+
+.connectors.r-of-2 .vert-line-2 {
+    grid-column-start: 3;
+    grid-row-start: 6;
+    height: 100%;
+    width: 3px;
+    background-color: black;
+    align-self: start;
+}
+
+.connectors.r-of-2 .game-1-lines .vert-line-2 {
+    grid-row-end: 10;
+}
+
+.connectors.r-of-2 .game-2-lines .vert-line-2 {
+    grid-row-end: -10;
+}
+
+.connectors.r-of-2 .next-line {
+    grid-column-start: 3;
+    grid-column-end: -1;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+}
+
+.connectors.r-of-2 .game-1-lines .next-line {
+    grid-row-start: 10;
+}
+
+.connectors.r-of-2 .game-2-lines .next-line {
+    grid-row-start: -10;
+}
+
+.connectors.r-of-4 {
+    display: grid;
+    grid-template-rows: 4;
+    gap: 2rem;
+}
+
+.connectors.r-of-4 .game-1-lines {
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.connectors.r-of-4 .game-2-lines {
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.connectors.r-of-4 .game-3-lines {
+    grid-row-start: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.connectors.r-of-4 .game-4-lines {
+    grid-row-start: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.connectors.r-of-4 .top-line {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    align-self: baseline;
+    justify-self: center;
+}
+
+.connectors.r-of-4 .bottom-line {
+    grid-column-start: 1;
+    grid-row-start: 8;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    align-self: baseline;
+    justify-self: center;
+}
+
+.connectors.r-of-4 .vert-line-1 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-row-end: 8;
+    height: 100%;
+    width: 3px;
+    background-color: black;
+    align-self: start;
+}
+
+.connectors.r-of-4 .connector-line {
+    grid-column-start: 2;
+    grid-row-start: 6;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    align-self: baseline;
+    justify-self: center;
+}
+
+.connectors.r-of-4 .vert-line-2 {
+    grid-column-start: 3;
+    grid-row-start: 6;
+    height: 100%;
+    width: 3px;
+    background-color: black;
+    align-self: start;
+}
+
+.connectors.r-of-4 .game-4-lines .vert-line-2 {
+    grid-row-end: 3;
+}
+
+.connectors.r-of-4 .game-3-lines .vert-line-2 {
+    grid-row-end: -3;
+}
+
+.connectors.r-of-4 .game-2-lines .vert-line-2 {
+    grid-row-end: -9;
+}
+
+.connectors.r-of-4 .game-1-lines .vert-line-2 {
+    grid-row-end: 9;
+}
+
+.connectors.r-of-4 .game-4-lines .next-line {
+    grid-row-start: 3;
+}
+
+.connectors.r-of-4 .game-3-lines .next-line {
+    grid-row-start: -3;
+}
+
+.connectors.r-of-4 .game-2-lines .next-line {
+    grid-row-start: -9;
+}
+
+.connectors.r-of-4 .game-1-lines .next-line {
+    grid-row-start: -3;
+}
+
+.connectors.r-of-4 .next-line {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    grid-column-start: 3;
+    grid-column-end: -1;
+}

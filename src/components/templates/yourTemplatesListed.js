@@ -13,9 +13,9 @@ export const YourTemplatesListed = () => {
             method: "DELETE",
         })
             .then((res) => res.json())
-            .then(
-                setBrackets(brackets.filter((bracket) => bracket.id !== bracketId))
-            )
+            .then(data => {
+                setBrackets(data)
+            })
     }
 
     useEffect(

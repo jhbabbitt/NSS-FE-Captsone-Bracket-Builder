@@ -16,10 +16,6 @@ export const YourTemplatesListed = () => {
             .then(
                 setBrackets(brackets.filter((bracket) => bracket.id !== bracketId))
             )
-            fetch(`http://localhost:8088/competitors?bracketId=${bracketId}`,{
-                method: "DELETE",
-            })
-
     }
 
     useEffect(

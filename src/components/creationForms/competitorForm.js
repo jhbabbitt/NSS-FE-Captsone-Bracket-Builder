@@ -15,27 +15,29 @@ export const NewCompetitors = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
+    
         const competitors = competitorName.map((name, index) => ({
             name,
             bracketId,
             seed: index + 1
         }));
-
-        competitors.forEach((competitor) => {
-            fetch("http://localhost:8088/competitors", {
+    
+        const postRequests = competitors.map((competitor) => {
+            return fetch("http://localhost:8088/competitors", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(competitor)
             });
-
-        })
-
-        navigate(`/brackets/${bracketId}`);
-
+        });
+    
+        Promise.all(postRequests)
+            .then(() => {
+                navigate(`/brackets/${bracketId}`);
+            });
     };
+    
 
 
     const handleCompetitorNameChange = (index) => (event) => {

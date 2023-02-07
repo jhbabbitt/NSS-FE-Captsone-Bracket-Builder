@@ -14,8 +14,7 @@ export const YourTemplatesListed = () => {
         })
             .then((res) => res.json())
             .then(
-                setBrackets(brackets.filter((bracket) => bracket.id !== bracketId))
-            )
+                setBrackets(brackets.filter((bracket) => bracket.id !== bracketId))            )
     }
 
     useEffect(

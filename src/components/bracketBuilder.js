@@ -3,7 +3,7 @@ import "./bracketBuilder.css"
 import { Login } from "./auth/login"
 import { Register } from "./auth/register"
 import { Authorized } from "./views/authorized"
-import { YourBracketsPage } from "./views/yourBrackets"
+import { HomePage, YourBracketsPage } from "./views/homepage"
 
 export const BracketBuilder = () => {
     return <Routes>
@@ -13,7 +13,7 @@ export const BracketBuilder = () => {
 		<Route path="*" element={
 			<Authorized>
 				<>
-					<YourBracketsPage />
+					<HomePage />
 				</>
 			</Authorized>
 

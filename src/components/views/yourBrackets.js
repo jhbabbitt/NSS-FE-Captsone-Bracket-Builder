@@ -17,14 +17,10 @@ export const YourBracketsPage = () => {
             }>
             </Route>
             <Route path="/brackets/:bracketId" element={<TemplateViewer />} />
-            <Route path="/CreateNewBracket" element={
-                <>
-                    <NewBracketForm />
-                    <Outlet />
-                </>
-            }>
-            </Route>
-            <Route path="/NewCompetitors" element={<NewCompetitors numTeams={numTeams} />} />
+            <Route path="/CreateNewBracket" element={<NewBracketForm />} />
+            <Route path="/NewCompetitors/:bracketId" element={<NewCompetitors />} />
+
+
         </Routes>
     )
 }

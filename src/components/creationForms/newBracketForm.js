@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
-import { NewCompetitors } from "./competitorForm"
-
+import { useNavigate, useParams } from "react-router-dom"
 
 export const NewBracketForm = () => {
     const navigate = useNavigate()
@@ -47,8 +45,8 @@ export const NewBracketForm = () => {
             body: JSON.stringify(newBracket)
         })
             .then(response => response.json())
-            .then(() => {
-                navigate("/NewCompetitors", { state: { numTeams } },)
+            .then(data => {
+                navigate(`/NewCompetitors/${data.id}`)
             })
 
 
@@ -74,9 +72,5 @@ export const NewBracketForm = () => {
     );
 }
 
-
-
-
-
-
-
+ //at the end of this component, I want to route the user to a new page
+    //on the enter competitors page, I will need the id of the newly created bracket and the bracketTypeId of the newly created bracket

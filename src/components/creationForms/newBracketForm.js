@@ -71,6 +71,3 @@ export const NewBracketForm = () => {
         </form>
     );
 }
-
- //at the end of this component, I want to route the user to a new page
-    //on the enter competitors page, I will need the id of the newly created bracket and the bracketTypeId of the newly created bracket

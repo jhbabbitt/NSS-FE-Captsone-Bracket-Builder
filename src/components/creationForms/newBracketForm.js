@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 export const NewBracketForm = () => {
     const navigate = useNavigate()
@@ -34,24 +34,29 @@ export const NewBracketForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        if (bracketName !== '') {
+            const newBracket = { name: bracketName, bracketTypeId, userId: bracketUserObject.id };
 
-        const newBracket = { name: bracketName, bracketTypeId, userId: bracketUserObject.id };
-
-        return fetch('http://localhost:8088/brackets', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(newBracket)
-        })
-            .then(response => response.json())
-            .then(data => {
-                navigate(`/NewCompetitors/${data.id}`)
+            return fetch('http://localhost:8088/brackets', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newBracket)
             })
+                .then(response => response.json())
+                .then(data => {
+                    navigate(`/NewCompetitors/${data.id}`)
+                })
 
 
-    };
-    return (
+        }
+        else if (bracketName === '') {
+            alert("Please Enter a Name for the Bracket")
+        }
+    }
+
+    return (<>
         <form onSubmit={handleSubmit}>
             <label>
                 Bracket Name:
@@ -69,5 +74,12 @@ export const NewBracketForm = () => {
             <br />
             <button type="submit">Input Competitors</button>
         </form>
+        <div><button onClick={() => navigate(`/AllBrackets`)}>See All Brackets</button>
+            <button onClick={() => navigate(`/YourBrackets`)}>See Your Brackets</button>
+        </div>
+
+
+    </>
+
     );
 }

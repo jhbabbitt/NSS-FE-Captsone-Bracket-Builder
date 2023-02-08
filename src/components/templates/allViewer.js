@@ -46,6 +46,11 @@ export const AllTemplatesListed = () => {
 
     return (
         <div>
+            <div>
+                <h4>
+                    All Brackets
+                </h4>
+            </div>
             <ul>
                 {brackets.map(bracket => (
                     <li key={bracket.id}>

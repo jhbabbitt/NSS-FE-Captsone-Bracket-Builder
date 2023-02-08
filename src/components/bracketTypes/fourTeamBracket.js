@@ -14,23 +14,16 @@ export const FourTeamBracket = ({ prop }) => {
             .then(competitors => {
                 setCompetitors(competitors);
             });
-    }, []);
+    },);
 
     const findBySeed = (seed) => {
         return competitors.find(competitor => competitor?.seed === seed)?.name;
     }
 
-    const handleSemiFinalOne = (winner) => {
-        setSemiOneWinner(winner)
+    const handleWinner = (winner, setterFunction) => {
+        setterFunction(winner)
     }
 
-    const handleSemiFinalTwo = (winner) => {
-        setSemiTwoWinner(winner)
-    }
-
-    const handleFinal = (winner) => {
-        setFinalWinner(winner)
-    }
     const clearAll = () => {
         setSemiOneWinner(null);
         setSemiTwoWinner(null);
@@ -43,18 +36,18 @@ export const FourTeamBracket = ({ prop }) => {
             <div className="entire-4-team-bracket">
                 <div className="round r-of-4">
                     <div className="bracket-game">
-                        <button className="player top" onClick={() => handleSemiFinalOne(findBySeed(1))}>
+                        <button className="player top" onClick={() => handleWinner(findBySeed(1), setSemiOneWinner)}>
                             {findBySeed(1)}
                         </button>
-                        <button className="player bot" onClick={() => handleSemiFinalOne(findBySeed(4))}>
+                        <button className="player bot" onClick={() => handleWinner(findBySeed(4), setSemiOneWinner)}>
                             {findBySeed(4)}
                         </button>
                     </div>
                     <div className="bracket-game cont">
-                        <button className="player top" onClick={() => handleSemiFinalTwo(findBySeed(3))}>
+                        <button className="player top" onClick={() => handleWinner(findBySeed(3), setSemiTwoWinner)}>
                             {findBySeed(3)}
                         </button>
-                        <button className="player bot" onClick={() => handleSemiFinalTwo(findBySeed(2))}>
+                        <button className="player bot" onClick={() => handleWinner(findBySeed(2), setSemiTwoWinner)}>
                             {findBySeed(2)}
                         </button>
 
@@ -76,10 +69,10 @@ export const FourTeamBracket = ({ prop }) => {
                 </div>
                 <div className="round r-of-2">
                     <div className="bracket-game">
-                        <button className="player top" onClick={() => handleFinal(semiOneWinner)}>
+                        <button className="player top" onClick={() => handleWinner(semiOneWinner, setFinalWinner)}>
                             {semiOneWinner}
                         </button>
-                        <button className="player bot" onClick={() => handleFinal(semiTwoWinner)}>
+                        <button className="player bot" onClick={() => handleWinner(semiTwoWinner, setFinalWinner)}>
                             {semiTwoWinner}
                         </button>
 

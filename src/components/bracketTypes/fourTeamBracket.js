@@ -14,7 +14,7 @@ export const FourTeamBracket = ({ prop }) => {
             .then(competitors => {
                 setCompetitors(competitors);
             });
-    },);
+    }, []);
 
     const findBySeed = (seed) => {
         return competitors.find(competitor => competitor?.seed === seed)?.name;

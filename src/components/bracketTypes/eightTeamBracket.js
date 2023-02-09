@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { BackButtons } from "./backOutButtons";
+import { RoundOfFourConnectors } from "../../bracketLines/rOfFourConnectors";
 import "./eightTeamBracket.css"
+import { RoundOfTwoConnectors } from "../../bracketLines/rOfTwoConnectors";
+import { ChampionConnectors } from "../../bracketLines/championConnectors";
 
 export const EightTeamBracket = ({ prop }) => {
     const [competitors, setCompetitors] = useState([])
@@ -18,7 +21,7 @@ export const EightTeamBracket = ({ prop }) => {
             .then(competitors => {
                 setCompetitors(competitors);
             });
-    });
+    }, []);
 
     const findBySeed = (seed) => {
         return competitors.find(competitor => competitor?.seed === seed)?.name;
@@ -76,38 +79,7 @@ export const EightTeamBracket = ({ prop }) => {
                     </div>
                 </div>
                 <div className="connectors r-of-4">
-                    <div className="game-1-lines">
-                        <div className="top-line"></div>
-                        <div className="bottom-line"></div>
-                        <div className="vert-line-1"></div>
-                        <div className="connector-line"></div>
-                        <div className="vert-line-2"></div>
-                        <div className="next-line"></div>
-                    </div>
-                    <div className="game-2-lines">
-                        <div className="top-line"></div>
-                        <div className="bottom-line"></div>
-                        <div className="vert-line-1"></div>
-                        <div className="connector-line"></div>
-                        <div className="vert-line-2"></div>
-                        <div className="next-line"></div>
-                    </div>
-                    <div className="game-3-lines">
-                        <div className="top-line"></div>
-                        <div className="bottom-line"></div>
-                        <div className="vert-line-1"></div>
-                        <div className="connector-line"></div>
-                        <div className="vert-line-2"></div>
-                        <div className="next-line"></div>
-                    </div>
-                    <div className="game-4-lines">
-                        <div className="top-line"></div>
-                        <div className="bottom-line"></div>
-                        <div className="vert-line-1"></div>
-                        <div className="connector-line"></div>
-                        <div className="vert-line-2"></div>
-                        <div className="next-line"></div>
-                    </div>
+                    <RoundOfFourConnectors />
                 </div>
                 <div className="round r-of-4">
                     <div className="bracket-game">
@@ -128,22 +100,7 @@ export const EightTeamBracket = ({ prop }) => {
                     </div>
                 </div>
                 <div className="connectors r-of-2">
-                    <div className="game-1-lines">
-                        <div className="top-line"></div>
-                        <div className="bottom-line"></div>
-                        <div className="vert-line-1"></div>
-                        <div className="connector-line"></div>
-                        <div className="vert-line-2"></div>
-                        <div className="next-line"></div>
-                    </div>
-                    <div className="game-2-lines">
-                        <div className="top-line"></div>
-                        <div className="bottom-line"></div>
-                        <div className="vert-line-1"></div>
-                        <div className="connector-line"></div>
-                        <div className="vert-line-2"></div>
-                        <div className="next-line"></div>
-                    </div>
+                   <RoundOfTwoConnectors />
                 </div>
                 <div className="round r-of-2">
                     <div className="bracket-game">
@@ -156,10 +113,7 @@ export const EightTeamBracket = ({ prop }) => {
                     </div>
                 </div>
                 <div className="connectors champion-round">
-                    <div className="top-line"></div>
-                    <div className="bottom-line"></div>
-                    <div className="vert-line"></div>
-                    <div className="next-line"></div>
+                   <ChampionConnectors />
                 </div>
                 <div className="round champion-round">
                     <div className="bracket-game">

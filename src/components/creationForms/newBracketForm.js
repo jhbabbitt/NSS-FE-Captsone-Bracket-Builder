@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
+import { BackButtons } from "../bracketTypes/backOutButtons"
+import "./forms.css"
 
 export const NewBracketForm = () => {
     const navigate = useNavigate()
@@ -56,30 +58,30 @@ export const NewBracketForm = () => {
         }
     }
 
-    return (<>
-        <form onSubmit={handleSubmit}>
-            <label>
-                Bracket Name:
-                <input type="text" value={bracketName} onChange={handleBracketNameChange} />
-            </label>
-            <br />
-            <label>
-                Number of Teams:
-                <select value={numTeams} onChange={handleNumTeamsChange}>
-                    {bracketTypes.map(type => (
-                        <option key={type.id} value={type.numOfCompetitors}>{type.numOfCompetitors}</option>
-                    ))}
-                </select>
-            </label>
-            <br />
-            <button type="submit">Input Competitors</button>
-        </form>
-        <div><button onClick={() => navigate(`/AllBrackets`)}>See All Brackets</button>
-            <button onClick={() => navigate(`/YourBrackets`)}>See Your Brackets</button>
-        </div>
-
-
-    </>
+    return (
+        <>
+            <form  className="bracket-form" onSubmit={handleSubmit}>
+                <h1>Enter Bracket Details</h1>
+                <label>
+                    Bracket Name:
+                    <input type="text" value={bracketName} onChange={handleBracketNameChange} />
+                </label>
+                <br />
+                <label>
+                    Number of Teams:
+                    <select value={numTeams} onChange={handleNumTeamsChange}>
+                        {bracketTypes.map(type => (
+                            <option key={type.id} value={type.numOfCompetitors}>{type.numOfCompetitors}</option>
+                        ))}
+                    </select>
+                </label>
+                <br />
+                <button type="submit">Input Competitors</button>
+            </form>
+            <div>
+                <BackButtons />
+            </div>
+        </>
 
     );
 }

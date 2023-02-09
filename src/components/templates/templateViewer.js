@@ -16,7 +16,7 @@ export const TemplateViewer = () => {
 
     if (bracket.bracketTypeId === 1) {
         return <>
-            <h5 className="bracket-name">{bracket.name}</h5>
+            <div className="bracket-name">{bracket.name}</div>
             <FourTeamBracket prop={bracketId} />
         </>
 

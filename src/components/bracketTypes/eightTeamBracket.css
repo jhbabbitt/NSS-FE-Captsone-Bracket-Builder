@@ -54,7 +54,7 @@ button.player {
     grid-row-start: 8;
     height: 3px;
     width: 100%;
-    background-color: black;
+    background-color: white;
     justify-content: center;
     justify-self: center;
 }
@@ -64,7 +64,7 @@ button.player {
     grid-row-start: 10;
     height: 3px;
     width: 100%;
-    background-color: black;
+    background-color: white;
     justify-content: center;
     justify-self: center;
 }
@@ -75,7 +75,7 @@ button.player {
     grid-row-end: 10;
     height: 100%;
     width: 3px;
-    background-color: black;
+    background-color: white;
     align-self: start;
 }
 
@@ -85,7 +85,7 @@ button.player {
     grid-row-start: 9;
     height: 3px;
     width: 100%;
-    background-color: black;
+    background-color: white;
 }
 
 .connectors.r-of-2 {
@@ -113,7 +113,7 @@ button.player {
     grid-row-start: 5;
     height: 3px;
     width: 100%;
-    background-color: black;
+    background-color: white;
     justify-content: center;
     align-self: baseline;
     justify-self: center;
@@ -124,7 +124,7 @@ button.player {
     grid-row-start: 7;
     height: 3px;
     width: 100%;
-    background-color: black;
+    background-color: white;
     justify-content: center;
     align-self: baseline;
     justify-self: center;
@@ -136,7 +136,7 @@ button.player {
     grid-row-end: 7;
     height: 100%;
     width: 3px;
-    background-color: black;
+    background-color: white;
     align-self: start;
 }
 
@@ -145,7 +145,7 @@ button.player {
     grid-row-start: 6;
     height: 3px;
     width: 100%;
-    background-color: black;
+    background-color: white;
     justify-content: center;
     align-self: baseline;
     justify-self: center;
@@ -156,7 +156,7 @@ button.player {
     grid-row-start: 6;
     height: 100%;
     width: 3px;
-    background-color: black;
+    background-color: white;
     align-self: start;
 }
 
@@ -173,7 +173,7 @@ button.player {
     grid-column-end: -1;
     height: 3px;
     width: 100%;
-    background-color: black;
+    background-color: white;
 }
 
 .connectors.r-of-2 .game-1-lines .next-line {
@@ -223,7 +223,7 @@ button.player {
     grid-row-start: 3;
     height: 3px;
     width: 100%;
-    background-color: black;
+    background-color: white;
     justify-content: center;
     align-self: baseline;
     justify-self: center;
@@ -234,7 +234,7 @@ button.player {
     grid-row-start: 8;
     height: 3px;
     width: 100%;
-    background-color: black;
+    background-color: white;
     justify-content: center;
     align-self: baseline;
     justify-self: center;
@@ -246,7 +246,7 @@ button.player {
     grid-row-end: 8;
     height: 100%;
     width: 3px;
-    background-color: black;
+    background-color: white;
     align-self: start;
 }
 
@@ -255,7 +255,7 @@ button.player {
     grid-row-start: 6;
     height: 3px;
     width: 100%;
-    background-color: black;
+    background-color: white;
     justify-content: center;
     align-self: baseline;
     justify-self: center;
@@ -266,7 +266,7 @@ button.player {
     grid-row-start: 6;
     height: 100%;
     width: 3px;
-    background-color: black;
+    background-color: white;
     align-self: start;
 }
 
@@ -305,7 +305,7 @@ button.player {
 .connectors.r-of-4 .next-line {
     height: 3px;
     width: 100%;
-    background-color: black;
+    background-color: white;
     grid-column-start: 3;
     grid-column-end: -1;
 }

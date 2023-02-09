@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import "./forms.css"
 
 export const NewCompetitors = () => {
     const { bracketId } = useParams()
@@ -48,7 +49,7 @@ export const NewCompetitors = () => {
 
     const inputFields = Array.from({ length: bracket.bracketType?.numOfCompetitors }, (_, index) => (
         <label key={index}>
-            Seed {index + 1}
+            Seed {index + 1}: 
             <input
                 type="text"
                 value={competitorName[index] || ""}
@@ -58,7 +59,8 @@ export const NewCompetitors = () => {
     ));
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="competitors-form" onSubmit={handleSubmit}>
+            <h1>Enter Competitors</h1>
             {inputFields}
             <button type="submit">View Bracket</button>
         </form>

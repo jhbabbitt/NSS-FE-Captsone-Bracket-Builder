@@ -28,7 +28,7 @@ export const YourTemplatesListed = () => {
                 .then((bracketArray) => {
                     setBrackets(bracketArray)
                 })
-        },
+        }, []
     )
 
 

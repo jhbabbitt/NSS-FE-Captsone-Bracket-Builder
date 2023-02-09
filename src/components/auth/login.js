@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
 import "./login.css"
 
@@ -31,10 +30,10 @@ export const Login = () => {
         <main className="container--login">
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Bracket Builder</h1>
+                    <h1>BRACKET BUILDER</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
+                        <label htmlFor="inputEmail"></label>
                         <input type="email"
                             value={email}
                             onChange={evt => set(evt.target.value)}
@@ -46,12 +45,13 @@ export const Login = () => {
                         <button type="submit">
                             Sign in
                         </button>
+                        <button className = "create-account" onClick={() => navigate('/register')}>
+                            Create Account
+                        </button>
                     </fieldset>
                 </form>
             </section>
-            <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
-            </section>
+
         </main>
     )
 }

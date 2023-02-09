@@ -29,12 +29,11 @@ export const YourTemplatesListed = () => {
                     setBrackets(bracketArray)
                 })
         },
-        []
     )
 
 
     return (
-        <div>
+        <div className="bracket-list">
             <ul>
                 {brackets.map(bracket => (
                     <li key={bracket.id}>

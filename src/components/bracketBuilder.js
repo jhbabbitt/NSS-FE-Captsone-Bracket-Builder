@@ -3,7 +3,7 @@ import "./bracketBuilder.css"
 import { Login } from "./auth/login"
 import { Register } from "./auth/register"
 import { Authorized } from "./views/authorized"
-import { HomePage, YourBracketsPage } from "./views/homepage"
+import { HomePage } from "./views/homepage"
 
 export const BracketBuilder = () => {
     return <Routes>

@@ -22,7 +22,18 @@ select {
     width: 200px;
 }
 
-button[type="submit"] {
+.bracket-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.competitors-form button[type="submit"] {
     padding: 10px 20px;
     background-color: white;
     color: black;

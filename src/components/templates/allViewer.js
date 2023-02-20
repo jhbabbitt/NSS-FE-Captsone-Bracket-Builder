@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./templates.css"
 
 export const AllTemplatesListed = () => {
     const [brackets, setBrackets] = useState([])
@@ -45,7 +46,7 @@ export const AllTemplatesListed = () => {
     )
 
     return (
-        <div>
+        <div className="bracket-list">
             <div>
                 <h4>
                     All Brackets
